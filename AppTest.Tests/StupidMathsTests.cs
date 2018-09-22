@@ -11,7 +11,7 @@ namespace AppTest.Tests
         //1. Функция удаляет из списка каждый второй элемент(на вход элементы массива перечисленные через запятую в строке, к примеру, "1.2, 2, 3.5").
 
         #region RemoveEvens
-
+        [TestCategory("RemoveEvens")]
         [TestMethod]
         public void RemoveEvens()
         {
@@ -21,6 +21,7 @@ namespace AppTest.Tests
             Assert.AreEqual(shouldBe, reallyIs);
         }
 
+        [TestCategory("RemoveEvens")]
         [TestMethod]
         public void RemoveEvens_SuggestedTest()
         {
@@ -31,6 +32,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("RemoveEvens")]
         public void RemoveEvens_OneElement()
         {
             var input = "10";
@@ -40,6 +42,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("RemoveEvens")]
         public void RemoveEvens_TwoElements()
         {
             var input = "1, 5.2";
@@ -49,6 +52,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("RemoveEvens")]
         public void RemoveEvens_Commas()
         {
             var input = ",,,,,";
@@ -58,6 +62,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("RemoveEvens")]
         public void RemoveEvens_InputLetters()
         {
             var input = "a, b, c, d, e, f, g, h";
@@ -67,6 +72,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("RemoveEvens")]
         public void RemoveEvens_InputLettersNumbers()
         {
             var input = "aa, b, ccc, ddd, 11, ef, gh, 98";
@@ -81,6 +87,7 @@ namespace AppTest.Tests
 
         #region SolveEquations
 
+        [TestCategory("SolveEquation")]
         [TestMethod]
         public void SolveEquation()
         {
@@ -91,6 +98,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_NoRoots()
         {
             var input = new double[] {1, 0, 1};
@@ -100,6 +108,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_NoRootsBigNumbers()
         {
             var input = new double[] {1000000, 1, 1000000};
@@ -109,6 +118,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_OneZeroRoot()
         {
             var input = new double[] {1, 0, 0};
@@ -118,6 +128,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_OneNegativeRoot()
         {
             var input = new double[] {1, 2, 1};
@@ -127,6 +138,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_OneRealRoot()
         {
             var input = new double[] {1, -Math.Sqrt(2) * 2, 2};
@@ -136,6 +148,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_TwoOppositeRoots()
         {
             var input = new double[] {1, 0, -1};
@@ -145,6 +158,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_TwoDifferentRoots()
         {
             var input = new double[] {-1, -2, 15};
@@ -154,6 +168,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_NegativeInfinity()
         {
             var input = new double[] {double.NegativeInfinity, double.NegativeInfinity, double.NegativeInfinity};
@@ -163,6 +178,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_PositiveInfinity()
         {
             var input = new double[] {double.PositiveInfinity, double.PositiveInfinity, double.PositiveInfinity};
@@ -172,6 +188,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("SolveEquation")]
         public void SolveEquation_Epsilon()
         {
             var input = new double[] {double.Epsilon, double.Epsilon, double.Epsilon};
@@ -186,6 +203,7 @@ namespace AppTest.Tests
 
         #region DoCapture
 
+        [TestCategory("DoCapture")]
         [TestMethod]
         public void DoCapture()
         {
@@ -194,7 +212,8 @@ namespace AppTest.Tests
             var reallyIs = StupidMaths.DoCapture(input);
             Assert.AreEqual(shouldBe, reallyIs);
         }
-
+        
+        [TestCategory("DoCapture")]
         [TestMethod]
         public void DoCapture_OnePiece()
         {
@@ -208,6 +227,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("DoCapture")]
         public void DoCapture_BigNumbers()
         {
             var input = new[]
@@ -222,6 +242,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("DoCapture")]
         public void DoCapture_LikeKnights()
         {
             var input = new[]
@@ -235,6 +256,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("DoCapture")]
         public void DoCapture_LikeKnightsButMorePieces()
         {
             var input = new[]
@@ -250,6 +272,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("DoCapture")]
         public void DoCapture_FourCorners()
         {
             var input = new[]
@@ -265,6 +288,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("DoCapture")]
         public void DoCapture_FullBoard()
         {
             var input = new[]
@@ -348,6 +372,7 @@ namespace AppTest.Tests
         #region Sum
 
         [TestMethod]
+        [TestCategory("Sum")]
         public void Sum1()
         {
             var array = new[] {9};
@@ -357,6 +382,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("Sum")]
         public void Sum2()
         {
             var array = new[] {1, 2};
@@ -366,6 +392,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("Sum")]
         public void Sum3()
         {
             var array = new[] {1, 4, 3};
@@ -379,6 +406,7 @@ namespace AppTest.Tests
         #region ParseNumbers
 
         [TestMethod]
+        [TestCategory("ParseNumbers")]
         public void ParseNumbers1()
         {
             var input = "1, 3, 5, 7, 8";
@@ -388,6 +416,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("ParseNumbers")]
         public void ParseNumbers2()
         {
             var input = "1";
@@ -397,6 +426,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("ParseNumbers")]
         public void ParseNumbers3()
         {
             var input = "";
@@ -406,6 +436,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("ParseNumbers")]
         public void ParseNumbers4()
         {
             var input = " , ";
@@ -415,6 +446,7 @@ namespace AppTest.Tests
         }
 
         [TestMethod]
+        [TestCategory("ParseNumbers")]
         public void ParseNumbers5()
         {
             var input = "ж, о, п, 2  5    а";
